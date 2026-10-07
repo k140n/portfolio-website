@@ -30,6 +30,12 @@ export const profile = {
       issuer: "IIT Bombay (Mood Indigo) × Corizo",
       date: "2025",
       link: "#"
+    },
+    {
+      name: "Developing a Learning Mindset in the Age of AI",
+      issuer: "LinkedIn Learning",
+      date: "Oct 2026",
+      link: "https://www.linkedin.com/learning/certificates/660211639e31850ce6bce48040b7f02c3422a84a3f6d440cd7c478ad6e207250"
     }
   ],
   resumeUrl: "/resume.pdf"

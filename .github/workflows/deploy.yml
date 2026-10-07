@@ -1,0 +1,22 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches:
+      - main # This triggers the action when you push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd portfolio-website
+            git pull origin main
+            docker compose up --build -d
