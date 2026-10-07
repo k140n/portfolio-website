@@ -19,5 +19,7 @@ jobs:
           script: |
             cd portfolio-website
             git pull origin main
-            docker system prune -af
+            docker compose down
+            docker system prune -af --volumes
+            docker builder prune -af
             docker compose up --build -d
